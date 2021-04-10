@@ -1,0 +1,119 @@
+
+[*] Session connecting on 129.34.24.105.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 09:28:56 03-31-2021
+The last successful login was performed at 16:33:30 03-26-2021. Afterwards, 0 au
+thentication failure occurred.
+33-54195-XiShanYiJingHuanDao# enable
+Password:
+33-54195-XiShanYiJingHuanDao#  show running-config isis
+!<isis>
+router isis 401
+  area 00.1000
+  system-id 0100.3402.4105
+  router-id 10.34.24.105
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.401
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.401
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-54195-XiShanYiJingHuanDao#
+[*] Session Closed on 129.34.24.105.
+
+[*] Session connecting on 129.34.33.57.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 09:28:59 03-31-2021
+The last successful login was performed at 09:08:58 03-31-2021. Afterwards, 0 au
+thentication failure occurred.
+33-55356-HuangHuaYu# enable
+Password:
+33-55356-HuangHuaYu#  show running-config isis
+!<isis>
+router isis 504
+  area 00.1000
+  system-id 0100.3403.3057
+  router-id 10.34.33.57
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.504
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.504
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-55356-HuangHuaYu#
+[*] Session Closed on 129.34.33.57.

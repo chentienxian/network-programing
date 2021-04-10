@@ -1,0 +1,6701 @@
+
+[*] Session connecting on 129.34.8.1.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:14:54 04-07-2021
+The last successful login was performed at 18:03:45 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-50031-PingGuZongHeLouGuGan# enable
+Password:
+32-50031-PingGuZongHeLouGuGan#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8001
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 205
+  redistribute static metric 1000 route-map ume_contrl
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei5.1
+    ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+ --More--           interface vei6.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+  $
+$
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8001
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 201
+  redistribute static metric 1000 route-map ume_contrl
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei7.1
+ --More--             ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei8.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+  $
+$
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8001
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 202
+  redistribute static metric 1000 route-map ume_contrl
+  restart enable
+  segment-routing mpls enable
+ --More--           interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei9.1
+    ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei10.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+  $
+$
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8001
+  is-type level-2-only
+ --More--           metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 204
+  redistribute static metric 1000 route-map ume_contrl
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei11.1
+    ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei12.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+ --More--           $
+$
+router isis 1
+  area 00.1000
+  system-id 0100.3400.8001
+  is-type level-2-only
+  metric-style wide
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 1
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  address-family ipv6
+    multi-topology
+  $
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+ --More--           interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8001
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 203
+  redistribute static metric 1000 route-map ume_contrl
+  restart enable
+ --More--           segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei3.1
+    ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei4.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+  $
+$
+!</isis>
+32-50031-PingGuZongHeLouGuGan#
+[*] Session Closed on 129.34.8.1.
+
+[*] Session connecting on 129.34.8.2.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:02 04-07-2021
+The last successful login was performed at 18:04:07 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-50032-TaiHeYuanGuGan# enable
+Password:
+32-50032-TaiHeYuanGuGan#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8002
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 203
+  redistribute static metric 10000 route-map ume_contrl
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei3.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+  $
+  interface vei4.1
+ --More--             ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+$
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8002
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 205
+  redistribute static metric 10000 route-map ume_contrl
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei5.1
+ --More--             ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+  $
+  interface vei6.1
+    ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+$
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8002
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 202
+  redistribute static metric 10000 route-map ume_contrl
+  restart enable
+  segment-routing mpls enable
+ --More--           interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei9.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+  $
+  interface vei10.1
+    ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+$
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8002
+  is-type level-2-only
+ --More--           metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 204
+  redistribute static metric 10000 route-map ume_contrl
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei11.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+  $
+  interface vei12.1
+    ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+ --More--           $
+$
+router isis 1
+  area 00.1000
+  system-id 0100.3400.8002
+  is-type level-2-only
+  metric-style wide
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 1
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  address-family ipv6
+    multi-topology
+  $
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+ --More--           interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+$
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8002
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  bgp link-state level-2 instance-id 201
+  redistribute static metric 10000 route-map ume_contrl
+ --More--           restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei7.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+  $
+  interface vei8.1
+    ip router isis
+    circuit-type level-2-only
+    metric 4410 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+$
+!</isis>
+32-50032-TaiHeYuanGuGan#
+[*] Session Closed on 129.34.8.2.
+
+[*] Session connecting on 129.34.8.3.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:11 04-07-2021
+The last successful login was performed at 18:03:48 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52001-PingGuZongHeLouHuiJu1# enable
+Password:
+32-52001-PingGuZongHeLouHuiJu1#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8003
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei2.1
+ --More--             ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei3.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+ --More--         32-52001-PingGuZongHeLouHuiJu1#
+[*] Session Closed on 129.34.8.3.
+
+[*] Session connecting on 129.34.8.4.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:14 04-07-2021
+The last successful login was performed at 18:03:55 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52002-XiaZhiZhai# enable
+Password:
+32-52002-XiaZhiZhai#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8004
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei3.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface xgei-1/1/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei4.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+ --More--             network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/2.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52002-XiaZhiZhai#
+[*] Session Closed on 129.34.8.4.
+
+[*] Session connecting on 129.34.8.5.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:16 04-07-2021
+The last successful login was performed at 18:03:43 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52003-TaiHeYuanHuiJu1# enable
+Password:
+32-52003-TaiHeYuanHuiJu1#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8005
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei3.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+ --More--         32-52003-TaiHeYuanHuiJu1#
+[*] Session Closed on 129.34.8.5.
+
+[*] Session connecting on 129.34.8.6.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:20 04-07-2021
+The last successful login was performed at 18:04:30 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52004-PingGuZongHeLouHuiJu2# enable
+Password:
+32-52004-PingGuZongHeLouHuiJu2#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8006
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei2.1
+ --More--             ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei3.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface vei4.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei5.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/2.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52004-PingGuZongHeLouHuiJu2#
+[*] Session Closed on 129.34.8.6.
+
+[*] Session connecting on 129.34.8.7.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:23 04-07-2021
+The last successful login was performed at 18:04:14 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52005-WanDeFu# enable
+Password:
+32-52005-WanDeFu#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8007
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+ --More--             metric 200 level-2
+    network point-to-point
+  $
+$
+!</isis>
+32-52005-WanDeFu#
+[*] Session Closed on 129.34.8.7.
+
+[*] Session connecting on 129.34.8.8.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:25 04-07-2021
+The last successful login was performed at 18:03:48 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52006-TieTongBinHe# enable
+Password:
+32-52006-TieTongBinHe#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8008
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei4.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei3.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+ --More--             circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52006-TieTongBinHe#
+[*] Session Closed on 129.34.8.8.
+
+[*] Session connecting on 129.34.8.9.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:28 04-07-2021
+The last successful login was performed at 18:03:48 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52007-DingJiGongYu# enable
+Password:
+32-52007-DingJiGongYu#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8009
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei3.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface vei4.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei5.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52007-DingJiGongYu#
+[*] Session Closed on 129.34.8.9.
+
+[*] Session connecting on 129.34.8.10.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:30 04-07-2021
+The last successful login was performed at 18:04:00 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52008-NanDingFU# enable
+Password:
+32-52008-NanDingFU#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8010
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei2.1
+ --More--             ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei3.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/3.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/4.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/5.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+ --More--             circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/6.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei4.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+ --More--         32-52008-NanDingFU#
+[*] Session Closed on 129.34.8.10.
+
+[*] Session connecting on 129.34.8.11.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:36 04-07-2021
+The last successful login was performed at 18:04:35 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52009-MaFangHuiJu# enable
+Password:
+32-52009-MaFangHuiJu#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8011
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei3.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei4.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+ --More--             circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/3.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/4.203
+    ip router isis
+ --More--             ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei5.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52009-MaFangHuiJu#
+[*] Session Closed on 129.34.8.11.
+
+[*] Session connecting on 129.34.8.13.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:40 04-07-2021
+The last successful login was performed at 18:04:20 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52011-TaiHeYuanHuiJu2# enable
+Password:
+32-52011-TaiHeYuanHuiJu2#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8013
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei3.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface vei4.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei5.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52011-TaiHeYuanHuiJu2#
+[*] Session Closed on 129.34.8.13.
+
+[*] Session connecting on 129.34.8.14.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 18:59:48 04-07-2021
+The last successful login was performed at 17:48:05 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52012-ZhenLuoYing# enable
+Password:
+32-52012-ZhenLuoYing#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8014
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei2.1
+ --More--             ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei3.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei4.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.204
+    ip router isis
+ --More--             ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52012-ZhenLuoYing#
+[*] Session Closed on 129.34.8.14.
+
+[*] Session connecting on 129.34.8.15.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:48 04-07-2021
+The last successful login was performed at 18:04:17 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52013-DaHuaShan# enable
+Password:
+32-52013-DaHuaShan#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8015
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface xgei-1/1/0/1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52013-DaHuaShan#
+[*] Session Closed on 129.34.8.15.
+
+[*] Session connecting on 129.34.8.16.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:50 04-07-2021
+The last successful login was performed at 18:03:34 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52014-LiuJiaDian# enable
+Password:
+32-52014-LiuJiaDian#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8016
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei3.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei4.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.204
+    ip router isis
+ --More--             ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52014-LiuJiaDian#
+[*] Session Closed on 129.34.8.16.
+
+[*] Session connecting on 129.34.8.18.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:52 04-07-2021
+The last successful login was performed at 18:04:13 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52016-NanDuLeHe# enable
+Password:
+32-52016-NanDuLeHe#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8018
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei2.1
+ --More--             ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei3.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei4.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei5.205
+    ip router isis
+ --More--             ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+ --More--         !</isis>
+32-52016-NanDuLeHe#
+[*] Session Closed on 129.34.8.18.
+
+[*] Session connecting on 129.34.8.19.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:56 04-07-2021
+The last successful login was performed at 18:03:29 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52017-KaoShanJi# enable
+Password:
+32-52017-KaoShanJi#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8019
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei3.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei4.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+ --More--             circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface xgei-1/1/0/2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+32-52017-KaoShanJi#
+[*] Session Closed on 129.34.8.19.
+
+[*] Session connecting on 129.34.8.20.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+    *******************************************************************
+    Welcome to ZXR10 ZXCTN 6700 Carrier-Class Router of ZTE Corporation
+    *******************************************************************
+    
+Login at: 19:15:59 04-07-2021
+The last successful login was performed at 18:04:29 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52018-TaiHeYuanHuiJu3# enable
+Password:
+32-52018-TaiHeYuanHuiJu3#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8020
+  is-type level-2-only
+  metric-style wide
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 200 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+ --More--             circuit-type level-2-only
+    metric 2210 level-2
+    network point-to-point
+    hello-multiplier 30
+  $
+  interface vei3.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+  interface vei4.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+    link-damped revert-interval 2000 10000 10000
+  $
+$
+!</isis>
+ --More--         32-52018-TaiHeYuanHuiJu3#
+[*] Session Closed on 129.34.8.20.
+
+[*] Session connecting on 129.34.8.21.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:03 04-07-2021
+The last successful login was performed at 18:04:06 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52101-PingGuQuSiZhongYeWuHuiJu-6180H# enable
+Password:
+33-52101-PingGuQuSiZhongYeWuHuiJu-6180H#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8021
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface vei1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52101-PingGuQuSiZhongYeWuHuiJu-6180H#
+[*] Session Closed on 129.34.8.21.
+
+[*] Session connecting on 129.34.8.22.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:05 04-07-2021
+The last successful login was performed at 18:03:40 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52102-PingGuQuDaJinHuTongYeWuHuiJu-6180H# enable
+Password:
+33-52102-PingGuQuDaJinHuTongYeWuHuiJu-6180H#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8022
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+ --More--           interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52102-PingGuQuDaJinHuTongYeWuHuiJu-6180H#
+[*] Session Closed on 129.34.8.22.
+
+[*] Session connecting on 129.34.8.23.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:07 04-07-2021
+The last successful login was performed at 18:04:29 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52103-PingGuLiNongHuTong-6180H# enable
+Password:
+33-52103-PingGuLiNongHuTong-6180H#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8023
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+ --More--           interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52103-PingGuLiNongHuTong-6180H#
+[*] Session Closed on 129.34.8.23.
+
+[*] Session connecting on 129.34.8.24.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:10 04-07-2021
+The last successful login was performed at 18:03:58 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52104-PingGuWanDeFu-6180H# enable
+Password:
+33-52104-PingGuWanDeFu-6180H#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8024
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+ --More--           interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52104-PingGuWanDeFu-6180H#
+[*] Session Closed on 129.34.8.24.
+
+[*] Session connecting on 129.34.8.25.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:11 04-07-2021
+The last successful login was performed at 18:04:37 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52105-PingGuTiYuZhongXin-6180H# enable
+Password:
+33-52105-PingGuTiYuZhongXin-6180H#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8025
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+
+  set-overload-bit on-start-up 600
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52105-PingGuTiYuZhongXin-6180H#
+[*] Session Closed on 129.34.8.25.
+
+[*] Session connecting on 129.34.8.26.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:13 04-07-2021
+The last successful login was performed at 18:03:58 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52106-PingingGuXingLongZhuang# enable
+Password:
+33-52106-PingingGuXingLongZhuang#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8026
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+ --More--           interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52106-PingingGuXingLongZhuang#
+[*] Session Closed on 129.34.8.26.
+
+[*] Session connecting on 129.34.8.27.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:15 04-07-2021
+The last successful login was performed at 18:04:39 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52107-PingGuDaGuanZhuang# enable
+Password:
+33-52107-PingGuDaGuanZhuang#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8027
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+ --More--           interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52107-PingGuDaGuanZhuang#
+[*] Session Closed on 129.34.8.27.
+
+[*] Session connecting on 129.34.8.28.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:18 04-07-2021
+The last successful login was performed at 18:04:28 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52108-XiaoGuanZhuangHuiJu-6180H# enable
+Password:
+33-52108-XiaoGuanZhuangHuiJu-6180H#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8028
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+ --More--           interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52108-XiaoGuanZhuangHuiJu-6180H#
+[*] Session Closed on 129.34.8.28.
+
+[*] Session connecting on 129.34.8.29.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:19 04-07-2021
+The last successful login was performed at 18:04:35 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52109-PingGuTieTongLeXi# enable
+Password:
+33-52109-PingGuTieTongLeXi#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8029
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface vei1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52109-PingGuTieTongLeXi#
+[*] Session Closed on 129.34.8.29.
+
+[*] Session connecting on 129.34.8.30.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:22 04-07-2021
+The last successful login was performed at 18:03:55 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+32-52110# enable
+Password:
+32-52110#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8030
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+ --More--           interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+32-52110#
+[*] Session Closed on 129.34.8.30.
+
+[*] Session connecting on 129.34.8.31.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:24 04-07-2021
+The last successful login was performed at 18:04:46 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52111-pinggudongfengbaojianchang# enable
+Password:
+33-52111-pinggudongfengbaojianchang#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8031
+  is-type level-2-only
+  metric-style wide
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  interface loopback1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+  $
+  interface vei1.1
+    ip router isis
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+ --More--           interface vei2.1
+    ip router isis
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52111-pinggudongfengbaojianchang#
+[*] Session Closed on 129.34.8.31.
+
+[*] Session connecting on 129.34.8.32.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:26 04-07-2021
+The last successful login was performed at 18:04:03 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52112-PingGuYuanTianDui# enable
+Password:
+33-52112-PingGuYuanTianDui#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8032
+  router-id 10.34.8.32
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei2.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52112-PingGuYuanTianDui#
+[*] Session Closed on 129.34.8.32.
+
+[*] Session connecting on 129.34.8.33.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:27 04-07-2021
+The last successful login was performed at 18:04:34 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52113-PingGuDongSiQu# enable
+Password:
+33-52113-PingGuDongSiQu#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8033
+  router-id 10.34.8.33
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+
+  set-overload-bit on-start-up 600
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei2.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52113-PingGuDongSiQu#
+[*] Session Closed on 129.34.8.33.
+
+[*] Session connecting on 129.34.8.34.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:30 04-07-2021
+The last successful login was performed at 18:03:38 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52114-PingGuYiDong# enable
+Password:
+33-52114-PingGuYiDong#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8034
+  router-id 10.34.8.34
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 600
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+  $
+  interface vei2.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52114-PingGuYiDong#
+[*] Session Closed on 129.34.8.34.
+
+[*] Session connecting on 129.34.8.35.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:32 04-07-2021
+The last successful login was performed at 18:04:09 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52115-PingguGuanShang# enable
+Password:
+33-52115-PingguGuanShang#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8035
+  router-id 10.34.8.35
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+
+  set-overload-bit on-start-up 600
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+  $
+  interface vei2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52115-PingguGuanShang#
+[*] Session Closed on 129.34.8.35.
+
+[*] Session connecting on 129.34.8.36.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:34 04-07-2021
+The last successful login was performed at 18:04:04 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52116-PingGuBeiTuMen# enable
+Password:
+33-52116-PingGuBeiTuMen#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8036
+  router-id 10.34.8.36
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+
+  set-overload-bit on-start-up 600
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52116-PingGuBeiTuMen#
+[*] Session Closed on 129.34.8.36.
+
+[*] Session connecting on 129.34.8.37.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:37 04-07-2021
+The last successful login was performed at 18:03:42 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52117-PingGuHuaShanDaJi# enable
+Password:
+33-52117-PingGuHuaShanDaJi#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8037
+  router-id 10.34.8.37
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52117-PingGuHuaShanDaJi#
+[*] Session Closed on 129.34.8.37.
+
+[*] Session connecting on 129.34.8.38.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:38 04-07-2021
+The last successful login was performed at 18:03:56 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52118-PingGuHouBeiGong# enable
+Password:
+33-52118-PingGuHouBeiGong#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8038
+  router-id 10.34.8.38
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52118-PingGuHouBeiGong#
+[*] Session Closed on 129.34.8.38.
+
+[*] Session connecting on 129.34.8.39.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:41 04-07-2021
+The last successful login was performed at 18:03:37 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52119-PingGuXiaoYuZi# enable
+Password:
+33-52119-PingGuXiaoYuZi#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8039
+  router-id 10.34.8.39
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+  $
+  interface vei2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52119-PingGuXiaoYuZi#
+[*] Session Closed on 129.34.8.39.
+
+[*] Session connecting on 129.34.8.41.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:43 04-07-2021
+The last successful login was performed at 18:04:37 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+PingGuDongDian6180H# enable
+Password:
+PingGuDongDian6180H#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8041
+  router-id 10.34.8.41
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+PingGuDongDian6180H#
+[*] Session Closed on 129.34.8.41.
+
+[*] Session connecting on 129.34.8.42.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:45 04-07-2021
+The last successful login was performed at 18:03:44 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+PingGuMaFangKaiFaQu6180H# enable
+Password:
+PingGuMaFangKaiFaQu6180H#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8042
+  router-id 10.34.8.42
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+PingGuMaFangKaiFaQu6180H#
+[*] Session Closed on 129.34.8.42.
+
+[*] Session connecting on 129.34.8.43.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:48 04-07-2021
+The last successful login was performed at 18:04:19 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+PingGuMenLou6180h# enable
+Password:
+PingGuMenLou6180h#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8043
+  router-id 10.34.8.43
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+PingGuMenLou6180h#
+[*] Session Closed on 129.34.8.43.
+
+[*] Session connecting on 129.34.8.40.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:49 04-07-2021
+The last successful login was performed at 18:04:00 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+52123-PingGuDongGaoCun6180H# enable
+Password:
+52123-PingGuDongGaoCun6180H#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8040
+  router-id 10.34.8.40
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+  $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+52123-PingGuDongGaoCun6180H#
+[*] Session Closed on 129.34.8.40.
+
+[*] Session connecting on 129.34.8.44.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:51 04-07-2021
+The last successful login was performed at 18:04:15 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52124-RenMinFaYuan# enable
+Password:
+33-52124-RenMinFaYuan#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8044
+  router-id 10.34.8.44
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52124-RenMinFaYuan#
+[*] Session Closed on 129.34.8.44.
+
+[*] Session connecting on 129.34.8.45.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:54 04-07-2021
+The last successful login was performed at 18:04:24 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52125-DaWangWu# enable
+Password:
+33-52125-DaWangWu#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8045
+  router-id 10.34.8.45
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52125-DaWangWu#
+[*] Session Closed on 129.34.8.45.
+
+[*] Session connecting on 129.34.8.46.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:55 04-07-2021
+The last successful login was performed at 18:04:16 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52126-donggaocunshoufei# enable
+Password:
+33-52126-donggaocunshoufei#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8046
+  router-id 10.34.8.46
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52126-donggaocunshoufei#
+[*] Session Closed on 129.34.8.46.
+
+[*] Session connecting on 129.34.8.47.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:58 04-07-2021
+The last successful login was performed at 18:04:01 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52127-daodi# enable
+Password:
+33-52127-daodi#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8047
+  router-id 10.34.8.47
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52127-daodi#
+[*] Session Closed on 129.34.8.47.
+
+[*] Session connecting on 129.34.8.48.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:16:59 04-07-2021
+The last successful login was performed at 18:04:32 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52128-yanggezhuang# enable
+Password:
+33-52128-yanggezhuang#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8048
+  router-id 10.34.8.48
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52128-yanggezhuang#
+[*] Session Closed on 129.34.8.48.
+
+[*] Session connecting on 129.34.8.49.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:02 04-07-2021
+The last successful login was performed at 18:04:42 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52129-BinHeyewu# enable
+Password:
+33-52129-BinHeyewu#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8049
+  router-id 10.34.8.49
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+  $
+  interface vei2.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52129-BinHeyewu#
+[*] Session Closed on 129.34.8.49.
+
+[*] Session connecting on 129.34.8.50.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:04 04-07-2021
+The last successful login was performed at 18:03:47 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52130-Kaoshanji# enable
+Password:
+33-52130-Kaoshanji#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8050
+  router-id 10.34.8.50
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+  $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52130-Kaoshanji#
+[*] Session Closed on 129.34.8.50.
+
+[*] Session connecting on 129.34.8.51.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:06 04-07-2021
+The last successful login was performed at 18:03:30 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52131-hanzhuangzhen# enable
+Password:
+33-52131-hanzhuangzhen#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8051
+  router-id 10.34.8.51
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52131-hanzhuangzhen#
+[*] Session Closed on 129.34.8.51.
+
+[*] Session connecting on 129.34.8.52.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:08 04-07-2021
+The last successful login was performed at 18:04:28 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52132-xinnongcun# enable
+Password:
+33-52132-xinnongcun#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8052
+  router-id 10.34.8.52
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52132-xinnongcun#
+[*] Session Closed on 129.34.8.52.
+
+[*] Session connecting on 129.34.8.53.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:10 04-07-2021
+The last successful login was performed at 18:03:57 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52133-nandulehe# enable
+Password:
+33-52133-nandulehe#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8053
+  router-id 10.34.8.53
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52133-nandulehe#
+[*] Session Closed on 129.34.8.53.
+
+[*] Session connecting on 129.34.8.54.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:12 04-07-2021
+The last successful login was performed at 18:04:26 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52134-xiangyangnanjieyewuhuiju# enable
+Password:
+33-52134-xiangyangnanjieyewuhuiju#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8054
+  router-id 10.34.8.54
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52134-xiangyangnanjieyewuhuiju#
+[*] Session Closed on 129.34.8.54.
+
+[*] Session connecting on 129.34.8.55.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:14 04-07-2021
+The last successful login was performed at 18:03:43 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52135-pingguxiazhizhaiyewuhuiju# enable
+Password:
+33-52135-pingguxiazhizhaiyewuhuiju#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8055
+  router-id 10.34.8.55
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52135-pingguxiazhizhaiyewuhuiju#
+[*] Session Closed on 129.34.8.55.
+
+[*] Session connecting on 129.34.8.56.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:16 04-07-2021
+The last successful login was performed at 18:03:45 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52136-PingGushandongzhuang-6180H# enable
+Password:
+33-52136-PingGushandongzhuang-6180H#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8056
+  router-id 10.34.8.56
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52136-PingGushandongzhuang-6180H#
+[*] Session Closed on 129.34.8.56.
+
+[*] Session connecting on 129.34.8.57.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:18 04-07-2021
+The last successful login was performed at 18:04:42 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52137-PingGuchengtai-6180H# enable
+Password:
+33-52137-PingGuchengtai-6180H#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8057
+  router-id 10.34.8.57
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52137-PingGuchengtai-6180H#
+[*] Session Closed on 129.34.8.57.
+
+[*] Session connecting on 129.34.8.58.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:20 04-07-2021
+The last successful login was performed at 18:03:39 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52138-PingGuxiagezhuang-6180H# enable
+Password:
+33-52138-PingGuxiagezhuang-6180H#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8058
+  router-id 10.34.8.58
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52138-PingGuxiagezhuang-6180H#
+[*] Session Closed on 129.34.8.58.
+
+[*] Session connecting on 129.34.8.59.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:23 04-07-2021
+The last successful login was performed at 18:03:58 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52139-PingGyiyunrong6180H# enable
+Password:
+33-52139-PingGyiyunrong6180H#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8059
+  router-id 10.34.8.59
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 6220 level-2
+    network point-to-point
+  $
+  interface xgei-1/1/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52139-PingGyiyunrong6180H#
+[*] Session Closed on 129.34.8.59.
+
+[*] Session connecting on 129.34.8.60.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:24 04-07-2021
+The last successful login was performed at 18:03:45 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52140-PingGuxisiqu6180H# enable
+Password:
+33-52140-PingGuxisiqu6180H#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8060
+  router-id 10.34.8.60
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface xgei-1/7/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52140-PingGuxisiqu6180H#
+[*] Session Closed on 129.34.8.60.
+
+[*] Session connecting on 129.34.8.61.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:26 04-07-2021
+The last successful login was performed at 18:04:38 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52141-PingGuyuegezhuang6180H# enable
+Password:
+33-52141-PingGuyuegezhuang6180H#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8061
+  router-id 10.34.8.61
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention link-up enable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+ --More--             metric 10 level-2
+    network point-to-point
+  $
+  interface xgei-1/1/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52141-PingGuyuegezhuang6180H#
+[*] Session Closed on 129.34.8.61.
+
+[*] Session connecting on 129.34.8.62.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:28 04-07-2021
+The last successful login was performed at 18:04:03 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52142-pinggumafangyingyeting# enable
+Password:
+33-52142-pinggumafangyingyeting#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8062
+  router-id 10.34.8.62
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52142-pinggumafangyingyeting#
+[*] Session Closed on 129.34.8.62.
+
+[*] Session connecting on 129.34.8.63.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:32 04-07-2021
+The last successful login was performed at 18:04:38 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52143-PingGushangzhizhai-6180H# enable
+Password:
+33-52143-PingGushangzhizhai-6180H#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8063
+  router-id 10.34.8.63
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52143-PingGushangzhizhai-6180H#
+[*] Session Closed on 129.34.8.63.
+
+[*] Session connecting on 129.34.8.64.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:33 04-07-2021
+The last successful login was performed at 18:04:36 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52144-PingGushandongzhuanglukou-6180H# enable
+Password:
+33-52144-PingGushandongzhuanglukou-6180H#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8064
+  router-id 10.34.8.64
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52144-PingGushandongzhuanglukou-6180H#
+[*] Session Closed on 129.34.8.64.
+
+[*] Session connecting on 129.34.8.65.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:35 04-07-2021
+The last successful login was performed at 18:04:00 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52145-pingguxinggukaifaqubei# enable
+Password:
+33-52145-pingguxinggukaifaqubei#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8065
+  router-id 10.34.8.65
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52145-pingguxinggukaifaqubei#
+[*] Session Closed on 129.34.8.65.
+
+[*] Session connecting on 129.34.8.66.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:37 04-07-2021
+The last successful login was performed at 18:04:18 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52146-PingGuqixiangju-6180H# enable
+Password:
+33-52146-PingGuqixiangju-6180H#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8066
+  router-id 10.34.8.66
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52146-PingGuqixiangju-6180H#
+[*] Session Closed on 129.34.8.66.
+
+[*] Session connecting on 129.34.8.67.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:40 04-07-2021
+The last successful login was performed at 18:04:46 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52147-pingguhebeicunnan# enable
+Password:
+33-52147-pingguhebeicunnan#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8067
+  router-id 10.34.8.67
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52147-pingguhebeicunnan#
+[*] Session Closed on 129.34.8.67.
+
+[*] Session connecting on 129.34.8.68.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:41 04-07-2021
+The last successful login was performed at 18:04:04 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52148-pingguhebeicun# enable
+Password:
+33-52148-pingguhebeicun#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8068
+  router-id 10.34.8.68
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52148-pingguhebeicun#
+[*] Session Closed on 129.34.8.68.
+
+[*] Session connecting on 129.34.8.69.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:43 04-07-2021
+The last successful login was performed at 18:03:51 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52149-pinggushuinichang# enable
+Password:
+33-52149-pinggushuinichang#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8069
+  router-id 10.34.8.69
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52149-pinggushuinichang#
+[*] Session Closed on 129.34.8.69.
+
+[*] Session connecting on 129.34.8.70.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:45 04-07-2021
+The last successful login was performed at 18:03:42 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52150-pingguhaiguanwuliu# enable
+Password:
+33-52150-pingguhaiguanwuliu#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8070
+  router-id 10.34.8.70
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52150-pingguhaiguanwuliu#
+[*] Session Closed on 129.34.8.70.
+
+[*] Session connecting on 129.34.8.71.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:48 04-07-2021
+The last successful login was performed at 18:04:10 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52151-PingGumafanxinchengyiqubei-6180H# enable
+Password:
+33-52151-PingGumafanxinchengyiqubei-6180H#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8071
+  router-id 10.34.8.71
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52151-PingGumafanxinchengyiqubei-6180H#
+[*] Session Closed on 129.34.8.71.
+
+[*] Session connecting on 129.34.8.72.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:49 04-07-2021
+The last successful login was performed at 18:03:37 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52152-PingGutietajinpinggongyuan-6180H# enable
+Password:
+33-52152-PingGutietajinpinggongyuan-6180H#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8072
+  router-id 10.34.8.72
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52152-PingGutietajinpinggongyuan-6180H#
+[*] Session Closed on 129.34.8.72.
+
+[*] Session connecting on 129.34.8.73.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:51 04-07-2021
+The last successful login was performed at 18:04:36 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52153-PingGumafangyiyuan-6180H# enable
+Password:
+33-52153-PingGumafangyiyuan-6180H#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8073
+  router-id 10.34.8.73
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52153-PingGumafangyiyuan-6180H#
+[*] Session Closed on 129.34.8.73.
+
+[*] Session connecting on 129.34.8.74.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:54 04-07-2021
+The last successful login was performed at 18:03:51 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52154-PingGunanzhangdai-6180H# enable
+Password:
+33-52154-PingGunanzhangdai-6180H#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8074
+  router-id 10.34.8.74
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52154-PingGunanzhangdai-6180H#
+[*] Session Closed on 129.34.8.74.
+
+[*] Session connecting on 129.34.8.75.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:55 04-07-2021
+The last successful login was performed at 18:04:47 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52155-pingguhongshikan# enable
+Password:
+33-52155-pingguhongshikan#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8075
+  router-id 10.34.8.75
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52155-pingguhongshikan#
+[*] Session Closed on 129.34.8.75.
+
+[*] Session connecting on 129.34.8.76.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:17:59 04-07-2021
+The last successful login was performed at 18:04:04 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52156-pinggudiaowocun# enable
+Password:
+33-52156-pinggudiaowocun#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8076
+  router-id 10.34.8.76
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52156-pinggudiaowocun#
+[*] Session Closed on 129.34.8.76.
+
+[*] Session connecting on 129.34.8.77.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:00 04-07-2021
+The last successful login was performed at 18:04:19 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+3-52157-pingguhuangsongyu# enable
+Password:
+3-52157-pingguhuangsongyu#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8077
+  router-id 10.34.8.77
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+3-52157-pingguhuangsongyu#
+[*] Session Closed on 129.34.8.77.
+
+[*] Session connecting on 129.34.8.78.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:01 04-07-2021
+The last successful login was performed at 18:04:28 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52158-pingguliujiahe# enable
+Password:
+33-52158-pingguliujiahe#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8078
+  router-id 10.34.8.78
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52158-pingguliujiahe#
+[*] Session Closed on 129.34.8.78.
+
+[*] Session connecting on 129.34.8.79.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:05 04-07-2021
+The last successful login was performed at 18:03:30 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52159-PingGutaipingzhuang-6180H# enable
+Password:
+33-52159-PingGutaipingzhuang-6180H#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8079
+  router-id 10.34.8.79
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52159-PingGutaipingzhuang-6180H#
+[*] Session Closed on 129.34.8.79.
+
+[*] Session connecting on 129.34.8.80.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:06 04-07-2021
+The last successful login was performed at 18:03:52 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52160-PingGuxiongerying-6180H# enable
+Password:
+33-52160-PingGuxiongerying-6180H#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8080
+  router-id 10.34.8.80
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52160-PingGuxiongerying-6180H#
+[*] Session Closed on 129.34.8.80.
+
+[*] Session connecting on 129.34.8.81.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:02:11 04-07-2021
+The last successful login was performed at 17:48:06 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52161-pinggufengluotan# enable
+Password:
+33-52161-pinggufengluotan#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8081
+  router-id 10.34.8.81
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+ --More--           $
+  interface vei1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface vei2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52161-pinggufengluotan#
+[*] Session Closed on 129.34.8.81.
+
+[*] Session connecting on 129.34.8.82.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:02:13 04-07-2021
+The last successful login was performed at 17:48:49 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52162-pinggudongxingzhuang# enable
+Password:
+33-52162-pinggudongxingzhuang#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8082
+  router-id 10.34.8.82
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+ --More--           $
+  interface vei1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52162-pinggudongxingzhuang#
+[*] Session Closed on 129.34.8.82.
+
+[*] Session connecting on 129.34.8.83.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:02:14 04-07-2021
+The last successful login was performed at 17:47:55 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52163-pingguguquan# enable
+Password:
+33-52163-pingguguquan#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8083
+  router-id 10.34.8.83
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+ --More--           $
+  interface vei1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52163-pingguguquan#
+[*] Session Closed on 129.34.8.83.
+
+[*] Session connecting on 129.34.8.84.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:02:18 04-07-2021
+The last successful login was performed at 17:48:34 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52164-pinggushangying# enable
+Password:
+33-52164-pinggushangying#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8084
+  router-id 10.34.8.84
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+
+  set-overload-bit on-start-up 900
+  address-family ipv6
+    multi-topology
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+ --More--           $
+  interface vei1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface vei2.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 300 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52164-pinggushangying#
+[*] Session Closed on 129.34.8.84.
+
+[*] Session connecting on 129.34.8.85.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:17 04-07-2021
+The last successful login was performed at 18:03:36 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52165-pinggudongtumencunzhuang# enable
+Password:
+33-52165-pinggudongtumencunzhuang#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8085
+  router-id 10.34.8.85
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52165-pinggudongtumencunzhuang#
+[*] Session Closed on 129.34.8.85.
+
+[*] Session connecting on 129.34.8.86.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:18 04-07-2021
+The last successful login was performed at 18:03:44 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52166-pingguxinranxingye# enable
+Password:
+33-52166-pingguxinranxingye#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8086
+  router-id 10.34.8.86
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52166-pingguxinranxingye#
+[*] Session Closed on 129.34.8.86.
+
+[*] Session connecting on 129.34.8.87.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:21 04-07-2021
+The last successful login was performed at 18:03:35 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52167-pinggujintongyuan# enable
+Password:
+33-52167-pinggujintongyuan#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8087
+  router-id 10.34.8.87
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52167-pinggujintongyuan#
+[*] Session Closed on 129.34.8.87.
+
+[*] Session connecting on 129.34.8.88.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:22 04-07-2021
+The last successful login was performed at 18:04:01 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52168-pinggudaxingzhuang# enable
+Password:
+33-52168-pinggudaxingzhuang#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8088
+  router-id 10.34.8.88
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52168-pinggudaxingzhuang#
+[*] Session Closed on 129.34.8.88.
+
+[*] Session connecting on 129.34.8.89.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:25 04-07-2021
+The last successful login was performed at 18:03:46 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52169-pinggudingjigongyu# enable
+Password:
+33-52169-pinggudingjigongyu#
+[*] Session Closed on 129.34.8.89.
+
+[*] Session connecting on 129.34.8.90.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:27 04-07-2021
+The last successful login was performed at 18:03:32 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52170-pinggushijiguangchang# enable
+Password:
+33-52170-pinggushijiguangchang#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8090
+  router-id 10.34.8.90
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52170-pinggushijiguangchang#
+[*] Session Closed on 129.34.8.90.
+
+[*] Session connecting on 129.34.8.91.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:29 04-07-2021
+The last successful login was performed at 18:04:34 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52171-pinggujiaotongzhinengpingtai# enable
+Password:
+33-52171-pinggujiaotongzhinengpingtai#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8091
+  router-id 10.34.8.91
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.201
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52171-pinggujiaotongzhinengpingtai#
+[*] Session Closed on 129.34.8.91.
+
+[*] Session connecting on 129.34.8.92.
+
+[*] Username: who
+[*] Password: Who_123#4$
+ enable
+Password:
+33-52172-pingguliujiadianzhenzhengfu#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8092
+  router-id 10.34.8.92
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52172-pingguliujiadianzhenzhengfu#
+[*] Session Closed on 129.34.8.92.
+
+[*] Session connecting on 129.34.8.93.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:34 04-07-2021
+The last successful login was performed at 18:04:39 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52173-pinggubaigezhuang# enable
+Password:
+33-52173-pinggubaigezhuang#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8093
+  router-id 10.34.8.93
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface vei1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+ --More--             circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52173-pinggubaigezhuang#
+[*] Session Closed on 129.34.8.93.
+
+[*] Session connecting on 129.34.8.94.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:35 04-07-2021
+The last successful login was performed at 18:03:49 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52174-shunyinandulehezhenzhengfu# enable
+Password:
+33-52174-shunyinandulehezhenzhengfu#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8094
+  router-id 10.34.8.94
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52174-shunyinandulehezhenzhengfu#
+[*] Session Closed on 129.34.8.94.
+
+[*] Session connecting on 129.34.8.95.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:39 04-07-2021
+The last successful login was performed at 18:04:10 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52175-pinggufunaienyewuhuiju# enable
+Password:
+33-52175-pinggufunaienyewuhuiju#  show running-config isis
+!<isis>
+router isis 201
+  area 00.1000
+  system-id 0100.3400.8095
+  router-id 10.34.8.95
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  interface vei1.1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface vei2.1
+    ip router isis
+    ipv6 mpls ldp sync disable
+ --More--             circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+  $
+$
+!</isis>
+33-52175-pinggufunaienyewuhuiju#
+[*] Session Closed on 129.34.8.95.
+
+[*] Session connecting on 129.34.8.96.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:40 04-07-2021
+The last successful login was performed at 18:04:37 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52176-pingguhuatongnan# enable
+Password:
+33-52176-pingguhuatongnan#  show running-config isis
+!<isis>
+router isis 202
+  area 00.1000
+  system-id 0100.3400.8096
+  router-id 10.34.8.96
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+ --More--             network point-to-point
+  $
+  interface vei2.202
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52176-pingguhuatongnan#
+[*] Session Closed on 129.34.8.96.
+
+[*] Session connecting on 129.34.8.97.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:42 04-07-2021
+The last successful login was performed at 18:03:44 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52177-pingguxiagezhuangyoushanyougu# enable
+Password:
+33-52177-pingguxiagezhuangyoushanyougu#  show running-config isis
+!<isis>
+router isis 205
+  area 00.1000
+  system-id 0100.3400.8097
+  router-id 10.34.8.97
+  is-type level-2-only
+  metric-style wide
+  hostname dynamic disable
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+ --More--             network point-to-point
+  $
+  interface vei2.205
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52177-pingguxiagezhuangyoushanyougu#
+[*] Session Closed on 129.34.8.97.
+
+[*] Session connecting on 129.34.8.98.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:44 04-07-2021
+The last successful login was performed at 18:03:38 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52178-pingguxiogerzhai# enable
+Password:
+33-52178-pingguxiogerzhai#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8098
+  router-id 10.34.8.98
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52178-pingguxiogerzhai#
+[*] Session Closed on 129.34.8.98.
+
+[*] Session connecting on 129.34.8.99.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:46 04-07-2021
+The last successful login was performed at 18:03:55 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52179-pinggulaoquankou# enable
+Password:
+33-52179-pinggulaoquankou#  show running-config isis
+!<isis>
+router isis 204
+  area 00.1000
+  system-id 0100.3400.8099
+  router-id 10.34.8.99
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.204
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52179-pinggulaoquankou#
+[*] Session Closed on 129.34.8.99.
+
+[*] Session connecting on 129.34.8.100.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:49 04-07-2021
+The last successful login was performed at 18:03:43 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52180-pingguyunfengsi# enable
+Password:
+33-52180-pingguyunfengsi#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8100
+  router-id 10.34.8.100
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52180-pingguyunfengsi#
+[*] Session Closed on 129.34.8.100.
+
+[*] Session connecting on 129.34.8.101.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:51 04-07-2021
+The last successful login was performed at 18:04:01 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52181-pinggudongshuangying# enable
+Password:
+33-52181-pinggudongshuangying#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8101
+  router-id 10.34.8.101
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52181-pinggudongshuangying#
+[*] Session Closed on 129.34.8.101.
+
+[*] Session connecting on 129.34.8.102.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:53 04-07-2021
+The last successful login was performed at 18:03:55 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52182-pingguwangguantun# enable
+Password:
+33-52182-pingguwangguantun#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8102
+  router-id 10.34.8.102
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52182-pingguwangguantun#
+[*] Session Closed on 129.34.8.102.
+
+[*] Session connecting on 129.34.8.103.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:55 04-07-2021
+The last successful login was performed at 18:04:38 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52183-pingguwanggezhuang# enable
+Password:
+33-52183-pingguwanggezhuang#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8103
+  router-id 10.34.8.103
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52183-pingguwanggezhuang#
+[*] Session Closed on 129.34.8.103.
+
+[*] Session connecting on 129.34.8.104.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:18:56 04-07-2021
+The last successful login was performed at 18:04:10 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52184-pinggudongzhuang# enable
+Password:
+33-52184-pinggudongzhuang#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8104
+  router-id 10.34.8.104
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52184-pinggudongzhuang#
+[*] Session Closed on 129.34.8.104.
+
+[*] Session connecting on 129.34.8.105.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:19:00 04-07-2021
+The last successful login was performed at 18:04:42 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52185-pingguxifangezhuang# enable
+Password:
+33-52185-pingguxifangezhuang#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8105
+  router-id 10.34.8.105
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface xgei-1/1/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface xgei-1/7/0/1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52185-pingguxifangezhuang#
+[*] Session Closed on 129.34.8.105.
+
+[*] Session connecting on 129.34.8.106.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:19:02 04-07-2021
+The last successful login was performed at 18:04:38 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52186-pingguyingcheng# enable
+Password:
+33-52186-pingguyingcheng#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8106
+  router-id 10.34.8.106
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52186-pingguyingcheng#
+[*] Session Closed on 129.34.8.106.
+
+[*] Session connecting on 129.34.8.107.
+
+[*] Username: who
+[*] Password: Who_123#4$
+:
+
+        *********************************************************
+        Welcome to ZXR10 ZXCTN 6180H Carrier-Class Router of ZTE Corporation
+        *********************************************************
+Login at: 19:19:04 04-07-2021
+The last successful login was performed at 18:03:36 04-07-2021. Afterwards, 0 au
+thentication failure occurred.
+33-52187-pinggumimakongjian# enable
+Password:
+33-52187-pinggumimakongjian#  show running-config isis
+!<isis>
+router isis 203
+  area 00.1000
+  system-id 0100.3400.8107
+  router-id 10.34.8.107
+  is-type level-2-only
+  metric-style wide
+  disable-snp-authentication
+  fast-reroute ti-lfa sr-mpls level-2
+  microloop-prevention frr disable
+  microloop-prevention segment-routing mpls enable
+  mpls traffic-eng level-2
+  restart enable
+  segment-routing mpls enable
+  address-family ipv6
+    multi-topology
+  $
+  interface vei1.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 10 level-2
+    network point-to-point
+ --More--           $
+  interface vei2.203
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 6220 level-2
+    network point-to-point
+  $
+  interface loopback1
+    ip router isis
+    ipv6 mpls ldp sync disable
+    circuit-type level-2-only
+    metric 100 level-2
+    network point-to-point
+  $
+$
+!</isis>
+33-52187-pinggumimakongjian#
+[*] Session Closed on 129.34.8.107.
