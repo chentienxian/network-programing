@@ -1,0 +1,4 @@
+a. 对存量的log文件进行配置分析，log文件记录了批量telnet/ssh设备时下发的show running-config isis配置；
+b. log中记录多个设备的信息，需要截取不同设备ip对应的log文本段；
+c. 在设备对应的log文本段中查找对应的isis配置项；
+d. 提取isis配置项和关键参数，记录在xlsx文件中；
