@@ -1,5 +1,4 @@
 # network-programming
-
 工作中网元运维自动化相关脚本整理。
 
 1. get_ip_from_postgresql_database：
