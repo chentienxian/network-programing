@@ -1,6 +1,6 @@
 # coding: utf-8
 # 运行环境: python v2.7.5
-# 需要附件：ip_all.txt
+# 需要准备附件：ip_all.txt
 # 运行结果：输出dhcp_result.txt, failed_ips.txt,success_ips.txt
 
 from netconf_client.connect import connect_ssh
