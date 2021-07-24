@@ -1,0 +1,8 @@
+# 运行环境: python v2.7.5
+# 需要附件：ip_all.txt
+# 运行结果：输出dhcp_result.txt, failed_ips.txt,success_ips.txt
+
+1. 根据提供的ip地址，采用netconf方式多线程获取设备vrf和dhcp配置（xml格式）；
+2. 对xml进行过滤和解析，去除无关配置，将 vrf ip和dhcp relay ip配置写入csv文件中；
+3. 记录登录成功和失败的ip，以及运行开始和结束时间；
+
