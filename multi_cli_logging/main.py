@@ -8,7 +8,7 @@ import sys
 
 # 配置登录信息
 _Username = 'who'
-_Password = 'Who_123#4$'
+_Password = '123'
 
 # 待下发命令
 _Command = (
